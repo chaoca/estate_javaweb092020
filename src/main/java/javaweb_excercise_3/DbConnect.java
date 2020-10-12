@@ -35,8 +35,8 @@ public class DbConnect {
 				String district = rs.getString("district");
 				System.out.println("//////////////" + district + "///////////");
 			}
-			
-			//Display transaction category
+
+			// Display transaction category
 			sql = "select category from transaction_category";
 			rs = stmt.executeQuery(sql);
 
@@ -46,8 +46,8 @@ public class DbConnect {
 				String transCategory = rs.getString("category");
 				System.out.println("//////////////" + transCategory + "///////////");
 			}
-			
-			//Display building category
+
+			// Display building category
 			sql = "select category from building_category";
 			rs = stmt.executeQuery(sql);
 
@@ -69,7 +69,7 @@ public class DbConnect {
 			try {
 				if (stmt != null)
 					conn.close();
-				
+
 			} catch (SQLException se) {
 			} // do nothing
 			try {
