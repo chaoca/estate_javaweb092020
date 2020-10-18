@@ -215,38 +215,173 @@
 				<div class="page-content">
 					<div class="row">
 						<div class="col-xs-12">
-							<form class="form-horizontal" role="form">
+							<form class="form-horizontal" role="form" id='formEdit'>
 								<div class="form-group">
 									<label class="col-sm-3 control-label no-padding-right" for="name"> Tên tòa nhà </label>
-
 									<div class="col-sm-9">
-										<input type="text" id="name" class="form-control" />
+										<input type="text" id="name" class="form-control" name = 'name'/>
+									</div>
+								</div>
+								<div class="form-group">		
+									<label class="col-sm-3 control-label no-padding-right" for ="form-district">Quận hiện có</label>		
+									<div class="col-sm-9">
+										<select class="chosen-select form-control" id="form-district" data-placeholder="---Chọn quận---" name = 'district'>
+											<option value="">  </option>
+											<option value="Q1">Quận 1</option>
+											<option value="Q2">Quận 2</option>												
+										</select>
+									</div>							
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="ward">Phường</label>
+									<div class="col-sm-9">
+										<input type="text" id="ward" class="form-control" name = 'ward'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="street">Đường</label>
+									<div class="col-sm-9">
+										<input type="text" id="street" class="form-control" name = 'street'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="structure">Kết cấu</label>
+									<div class="col-sm-9">
+										<input type="text" id="structure" class="form-control" name = 'structure'/>
 									</div>
 								</div>
 								<div class="form-group">
 									<label class="col-sm-3 control-label no-padding-right" for="numberOfBasement"> Số tầng hầm </label>
 									<div class="col-sm-9">
-										<input type="number" id="numberOfBasement" class="form-control" />
+										<input type="number" id="numberOfBasement" class="form-control" name='numberOfBasement'/>
 									</div>
 								</div>
 								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="buildingTypes"> Loại tòa nhà </label>
+									<label class="col-sm-3 control-label no-padding-right" for="floorarea">Diện tích sàn</label>
+									<div class="col-sm-9">
+										<input type="text" id="floorarea" class="form-control" name = 'floorarea'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="direction">Hướng</label>
+									<div class="col-sm-9">
+										<input type="text" id="direction" class="form-control" name = 'direction'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="level">Hạng</label>
+									<div class="col-sm-9">
+										<input type="text" id="level" class="form-control" name = 'level'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="rentarea">Diện tích thuê</label>
+									<div class="col-sm-9">
+										<input type="text" id="rentarea" class="form-control" name = 'rentarea'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="rentareadescription">Mô tả diện tích</label>
+									<div class="col-sm-9">
+										<input type="text" id="rentareadescription" class="form-control" name = 'rentareadescription'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="rentcost">Giá thuê</label>
+									<div class="col-sm-9">
+										<input type="number" id="rentcost" class="form-control" name='rentcost'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="rentcostdescription">Mô tả giá</label>
+									<div class="col-sm-9">
+										<input type="text" id="rentcostdescription" class="form-control" name = 'rentcostdescription'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="servicefee">Phí dịch vụ</label>
+									<div class="col-sm-9">
+										<input type="text" id="servicefee" class="form-control" name = 'servicefee'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="carfee">Phí ô tô</label>
+									<div class="col-sm-9">
+										<input type="text" id="carfee" class="form-control" name = 'carfee'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="motobikefee">Phí mô tô</label>
+									<div class="col-sm-9">
+										<input type="text" id="motobikefee" class="form-control" name = 'motobikefee'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="overtimefee">Phí ngoài giờ</label>
+									<div class="col-sm-9">
+										<input type="text" id="overtimefee" class="form-control" name = 'overtimefee'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="electricityfee">Tiền điện</label>
+									<div class="col-sm-9">
+										<input type="text" id="electricityfee" class="form-control" name = 'electricityfee'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="deposit">Đặt cọc</label>
+									<div class="col-sm-9">
+										<input type="text" id="deposit" class="form-control" name = 'deposit'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="payment">Thanh toán</label>
+									<div class="col-sm-9">
+										<input type="text" id="payment" class="form-control" name = 'payment'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="renttime">Thời hạn thuê</label>
+									<div class="col-sm-9">
+										<input type="text" id="renttime" class="form-control" name = 'renttime'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="decorationtime">Thời gian trang trí</label>
+									<div class="col-sm-9">
+										<input type="text" id="decorationtime" class="form-control" name = 'decorationtime'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="manager">Tên quản lý</label>
+									<div class="col-sm-9">
+										<input type="text" id="manager" class="form-control" name = 'manager'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="managernumber">SĐT quản lý</label>
+									<div class="col-sm-9">
+										<input type="text" id="managernumber" class="form-control" name = 'managernumber'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right" for="brokeragefee">Phí mô giới</label>
+									<div class="col-sm-9">
+										<input type="text" id="brokeragefee" class="form-control" name = 'brokeragefee'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label no-padding-right"> Loại tòa nhà </label>
 									<div class = "col-sm-9">
-										<label class="checkbox-inline"><input type="checkbox" value="TANG_TRET">Tầng trệt</label>
-										<label class="checkbox-inline"><input type="checkbox" value="NGUYEN_CAN">Nguyên căn</label>
-										<label class="checkbox-inline"><input type="checkbox" value="NOI_THAT">Nội thất</label>
+										<label class="checkbox-inline"><input type="checkbox" value="TANG_TRET" id = "buildingTypes" name='buildingTypes'>Tầng trệt</label>
+										<label class="checkbox-inline"><input type="checkbox" value="NGUYEN_CAN" id = "buildingTypes" name='buildingTypes'>Nguyên căn</label>
+										<label class="checkbox-inline"><input type="checkbox" value="NOI_THAT" id = "buildingTypes" name='buildingTypes'>Nội thất</label>
 									</div>							
 								</div>
 								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="areaRent"> Diện tích thuê </label>
+									<label class="col-sm-3 control-label no-padding-right"></label>
 									<div class="col-sm-9">
-										<input type="number" id="areaRent" class="form-control" />
-									</div>
-								</div>
-								<div class="form-group">
-									<label class="col-sm-3 control-label no-padding-right" for="areaRent"></label>
-									<div class="col-sm-9">
-										<button type="button" class="btn btn-primary">Thêm tòa nhà</button>
+										<button type="button" class="btn btn-primary" id ="btnAddBuiding">Thêm tòa nhà</button>
 										<button type="button" class="btn btn-primary">Hủy</button>
 									</div>
 								</div>
@@ -308,17 +443,41 @@
 		  
 		</div>
 	  </div>
+	  <script src="assets/js/jquery.2.1.1.min.js"></script>
 	  <script>
-		  function assignmentBuilding() {
-			openModalAssignmentBuilding();
-		  }
-		  function openModalAssignmentBuilding() {
-			  $('#assignmentBuildingModal').modal();
-		  }
+		  $('#btnAddBuiding').click(function () {
+			  var data ={};
+			  var formData = $('#formEdit').serializeArray();
+			  var buildingTypes = [];
+			  $.each(formData, function (index, v) { 
+				  if(v.name=='buildingTypes'){
+					  buildingTypes.push(v.value);
+				  }else{
+					data[""+v.name+""]= v.value;
+				  }
+				  
+			  });
+			data["buildingTypes"]=buildingTypes			
+			  //call API add building
+			  $.ajax({
+				  type: "POST",
+				  url: "http://localhost:8080/api-building",
+				  data: JSON.stringify(data),
+				  dataType: "json",
+				  contentType: "application/json",
+				  success: function (response) {
+					  console.log('success');
+				  },
+				  error: function (response) {
+					  console.log('failed');
+					  console.log(response);
+					}
+				});
+		 	 })
 	  </script>
 
 	<!--[if !IE]> -->
-	<script src="assets/js/jquery.2.1.1.min.js"></script>
+
 
 	<!-- <![endif]-->
 
